@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="24a5-18e9-c493-cc47" name="Great_Britain_and_the_Commonwealth" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="9a47-ac76-5252-54d0" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="24a5-18e9-c493-cc48" name="Great_Britain_and_the_Commonwealth" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="9a47-ac76-5252-54d0" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="24a5-18e9-pubN65551" name="Konflikt 47 Rules"/>
     <publication id="24a5-18e9-pubN65619" name="Konflikt 47: Defiance"/>
@@ -8357,6 +8357,42 @@
       </selectionEntryGroups>
       <costs>
         <cost name="points" typeId="d66a-aa5a-74b9-e93a" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2c30-db01-2cd3-ebda" name="Commonwealth Target Designator" publicationId="9a47-ac76-pubN65838" page="46" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="4152-70ce-e306-6501" name="2" hidden="false" targetId="b6c1-c83f-a555-17ce" type="profile"/>
+        <infoLink id="24e8-543f-1386-ca93" name="Veteran" hidden="false" targetId="0f37-68ae-dd72-d2dd" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1444-eb62-1de5-1ce4" name="New CategoryLink" hidden="false" targetId="b7cf-ebf3-4ee6-2706" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="2ff6-bc4b-1c5c-bf19" name="Target Designator" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="228e-d515-d5b4-3f00" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58d1-7ed3-2960-228e" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5e4d-7bc9-9994-4798" name="Target Designator" hidden="false" targetId="0426-bbeb-d6c4-25a0" type="rule"/>
+            <infoLink id="c92f-101d-16b4-b303" name="Team Weapon" hidden="false" targetId="156d-a590-a33a-e434" type="rule"/>
+            <infoLink id="bba9-8199-20ef-85d2" name="Fixed" hidden="false" targetId="35f5-8cdf-741d-0eb4" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="points" typeId="d66a-aa5a-74b9-e93a" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="edab-a7d7-9035-c364" name="SMG" hidden="false" collective="false" import="true" targetId="da2f-423c-1523-5126" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a205-7810-f468-2c12" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f431-2768-27dc-6556" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="points" typeId="d66a-aa5a-74b9-e93a" value="30.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
