@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f33-eaeb-3ecf-e8d5" name="Japan" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="9a47-ac76-5252-54d0" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0f33-eaeb-3ecf-e8d5" name="Japan" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="9a47-ac76-5252-54d0" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="0f33-eaeb-pubN65551" name="Konflikt 47: Resurgence"/>
     <publication id="0f33-eaeb-pubN65636" name="Konflikt 47: Defiance"/>
@@ -4623,6 +4623,111 @@
       <costs>
         <cost name="points" typeId="d66a-aa5a-74b9-e93a" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="42e3-1d84-213f-ef64" name="Suicide Anti-Tank Team" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="64d9-f92d-4969-2e2a" name="New CategoryLink" hidden="false" targetId="b7cf-ebf3-4ee6-2706" primary="true"/>
+        <categoryLink id="e910-2d66-e9c8-cff5" name="Anti-Tank Team" hidden="false" targetId="c04e-ff05-f7cb-ae9b" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a54c-654e-d81c-fb88" name="Suicide Soldier" hidden="false" collective="false" import="true" type="model">
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="increment" field="d66a-aa5a-74b9-e93a" value="20.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="020b-0c80-419b-6391" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="d66a-aa5a-74b9-e93a" value="26.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="611f-6911-51f6-d7a2" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="d66a-aa5a-74b9-e93a" value="14.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5344-848e-632f-9e09" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c423-7438-bdb9-4208" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd39-05b6-6c93-70ff" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="c8be-b5dc-bc32-cb1f" name="Kamikaze" hidden="false">
+              <description>If a suicide anti-tank team assaults an enemy vehicle and the model manages to move into contact with the target, remove it and immediately resolve a hit against the vehicle with a penetration value of +8 (No other penetration modifiers apply).</description>
+            </rule>
+            <rule id="01ac-770f-09e7-73dd" name="Forward Position" hidden="false">
+              <description>A suicide anti-tank team counts as Observers/Snipers for Set-Up Purposes.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c93d-1094-1892-b0f9" name="Quality" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="012a-62bb-07c4-9fa5" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e093-66ba-64a8-3b7d" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="df97-b03a-d719-c872" name="Inexperienced" hidden="false" collective="false" import="true" targetId="5344-848e-632f-9e09" type="selectionEntry"/>
+            <entryLink id="78ba-59bf-0df6-82a6" name="Veteran" hidden="false" collective="false" import="true" targetId="611f-6911-51f6-d7a2" type="selectionEntry"/>
+            <entryLink id="891c-7ab8-be3b-480e" name="Regular" hidden="false" collective="false" import="true" targetId="020b-0c80-419b-6391" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="48e5-27f3-3b53-c00b" name="Bamboo Spear Fighter Squad" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="5817-94a9-e5f2-2da2" name="Green" hidden="false" targetId="a6b9-3b36-ca95-650b" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="cc48-254e-7cad-cf93" name="Anti-Tank Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="d66a-aa5a-74b9-e93a" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dce-52b2-2bc5-e367" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="384b-7dc2-afaa-e8f8" name="Tank Hunters" hidden="false" targetId="c707-cf7b-113b-507b" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="points" typeId="d66a-aa5a-74b9-e93a" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="dbb0-f835-90c5-e1e3" name="Squad Members" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="63c4-ed0d-3b33-1468" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0c7-6311-a781-dc98" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acbf-fc3b-06ed-a26d" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="d66a-aa5a-74b9-e93a" value="7.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6de6-5ab0-6a8c-784e" name="Soldier with Bamboo Spear" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e46f-180b-45e9-6ce5" type="min"/>
+                <constraint field="selections" scope="parent" value="14.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f51-1758-bc45-7aba" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="d66a-aa5a-74b9-e93a" value="7.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
